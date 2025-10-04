@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    .container{
+        width: 100vw;
+        height: 100vh;
+        background-color: beige;
+        border: 2px solid black;
+        box-sizing: border-box;
+    }
+    .box{
+        width: 300px;
+        height: 80px;
+        background-color: aquamarine;
+        border: 3px solid black;
+        position: relative;
+        border-radius: 3px;
+        animation-name: rightmovement;
+        animation-duration: 5s;
+        animation-iteration-count: infinite;
+        animation-delay: 2s;
+        animation-direction: alternate;
+        animation-timing-function:running;
+    }
+
+    @keyframes rightmovement{
+        from{
+            top: 0;
+            left: 0;
+        }
+        to{
+            top: 0;
+            left: 1200px;
+        }
+    }
+    #box2{
+        width: 300px;
+        height: 80px;
+        background-color: aquamarine;
+        border: 3px solid black;
+        position: relative;
+        border-radius: 3px;
+        animation-name: leftmovement;
+        animation: 5s linear 2s infinite alternate none running leftmovement ;
+    }
+    @keyframes leftmovement{
+        from{
+            top: 520px;
+            left: 1000px;
+        }
+        to{
+            top:520;
+            left: 0;
+        }
+        }
+
+    #circle{
+         width: 100px;
+        height: 100px;
+        background-color: aquamarine;
+        border: 3px solid black;
+        position: relative;
+        border-radius: 50px;
+        top: 120px;
+        left:670px ;
+        animation-name: circle;
+        animation: 5s linear 2s infinite alternate none running circle ;
+    }
+    @keyframes circle{
+        0%{
+            top: 1%;
+            left: 5%;
+
+        }
+        30%{
+            top: 5%;
+            left: 90%;
+        }
+        60%{
+            top: 70%;
+            left: 10%;
+
+        }
+        100%{
+            top: 5%;
+            left: 50;
+        }
+    }
+
+</style>
+<body>
+    <div class="container">
+        <div class="box">
+            </div>
+       
+        <div id="box2">
+            </div>
+
+        <div id="circle">
+
+        </div>
+    </div>
+</body>
+</html>
